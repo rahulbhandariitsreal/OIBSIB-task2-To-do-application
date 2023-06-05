@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#353434"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="55dp"
+            android:id="@+id/addtask"
+            android:layout_height="35dp"
+            android:src="@drawable/addtask"
+            android:layout_toLeftOf="@+id/logout"
+            android:layout_margin="10dp"
+            />
+
+        <ImageView
+         android:id="@+id/logout"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/logout" />
+
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    tools:context=".Home_Activity">
+
+
+
+    <FrameLayout
+        android:id="@+id/notefragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <fragment
+            android:name="com.example.todoapplication.fragments.Notes_Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_notes_" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/taskfragmnet"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <fragment
+            android:name="com.example.todoapplication.fragments.Task_Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_task_" />
+
+
+
+
+    </FrameLayout>
+
+</LinearLayout>
+
+</LinearLayout>
