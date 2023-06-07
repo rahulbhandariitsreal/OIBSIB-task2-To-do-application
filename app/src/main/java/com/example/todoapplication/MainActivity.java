@@ -163,17 +163,16 @@ public class MainActivity extends AppCompatActivity {
                 String name=nametext.getText().toString();
                 String pass=password.getText().toString();
 
-                if(TextUtils.isEmpty(name) ){
+                if(TextUtils.isEmpty(name) || TextUtils.isEmpty(pass)){
                     Toast.makeText(MainActivity.this, "Invalid Fields", Toast.LENGTH_SHORT).show();
                 }else{
                     User user1=new User(name,pass);
                 boolean result=    viewmodel_task.getauser(user1.getName(),user1.getPassword());
+                    Toast.makeText(MainActivity.this, ""+result, Toast.LENGTH_SHORT).show();
                 if(result){
                     saveduserinsharedpre(user1);
                     startActivity(new Intent(MainActivity.this,Home_Activity.class));
                     finish();
-                }else{
-                    Toast.makeText(MainActivity.this, "Wrong Credentials", Toast.LENGTH_SHORT).show();
                 }
 
 

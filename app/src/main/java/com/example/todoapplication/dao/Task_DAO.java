@@ -16,8 +16,8 @@ import java.util.List;
 public interface Task_DAO {
 
 
-    @Query("SELECT * FROM user")
-   LiveData< List<Task_Holder>> getAll_Task();
+    @Query("SELECT * FROM Task_Holder")
+   LiveData<List<Task_Holder>> getAll_Task();
 
     @Insert
     void insert_Task(Task_Holder users);

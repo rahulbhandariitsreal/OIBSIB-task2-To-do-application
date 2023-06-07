@@ -2,31 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/background_note"
     android:orientation="vertical"
     android:layout_margin="10dp"
-    android:background="@drawable/background_task"
     android:padding="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:text="DATE"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        />
-    <TextView
         android:textAlignment="viewEnd"
         android:id="@+id/dateTextView"
+        android:text="date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="19sp"
         android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/taskTextView_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="heading"
         android:textSize="28sp"
         android:textColor="@color/white"
         android:textStyle="bold" />
@@ -34,10 +28,8 @@
         android:id="@+id/taskTextView_deatils"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="detail"
         android:textSize="22sp"
         android:textColor="@color/white"
         android:textStyle="bold" />
-
-
-
 </LinearLayout>

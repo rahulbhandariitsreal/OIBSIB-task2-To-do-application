@@ -21,33 +21,17 @@ public class Task_Holder {
     @ColumnInfo(name = "date")
     String task_date;
 
-    @ColumnInfo(name = "note")
-    String notes;
+    @ColumnInfo(name = "task_detail")
+    String task_details;
 
     public Task_Holder() {
     }
 
-    public Task_Holder(String username, String task, String task_date, String notes) {
+    public Task_Holder(String username, String task, String task_date, String task_details) {
         this.username = username;
         this.task = task;
         this.task_date = task_date;
-        this.notes = notes;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getTask_date() {
-        return task_date;
-    }
-
-    public void setTask_date(String task_date) {
-        this.task_date = task_date;
+        this.task_details = task_details;
     }
 
     public int getId() {
@@ -58,6 +42,14 @@ public class Task_Holder {
         this.id = id;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getTask() {
         return task;
     }
@@ -66,11 +58,19 @@ public class Task_Holder {
         this.task = task;
     }
 
-    public String getNotes() {
-        return notes;
+    public String getTask_date() {
+        return task_date;
     }
 
-    public void setNotes(String notes) {
-        this.notes = notes;
+    public void setTask_date(String task_date) {
+        this.task_date = task_date;
+    }
+
+    public String getTask_details() {
+        return task_details;
+    }
+
+    public void setTask_details(String task_details) {
+        this.task_details = task_details;
     }
 }
